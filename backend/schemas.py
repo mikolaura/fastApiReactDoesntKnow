@@ -12,6 +12,7 @@ class UserCreate(_UserBase):
 
     class Config:
         orm_mode = True
+        from_attributes=True
 
 
 class User(_UserBase):
@@ -19,6 +20,7 @@ class User(_UserBase):
 
     class Config:
         orm_mode = True
+        from_attributes=True
 
 
 class _LeadBase(_pydantic.BaseModel):
@@ -41,5 +43,6 @@ class Lead(_LeadBase):
 
     class Config:
         orm_mode = True
+        from_attributes=True
 
 
