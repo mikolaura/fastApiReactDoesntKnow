@@ -12,7 +12,8 @@ class UserCreate(_UserBase):
 
     class Config:
         orm_mode = True
-        from_attributes=True
+        from_attributes = True
+        allow_population_by_field_name = True
 
 
 class User(_UserBase):
@@ -20,7 +21,8 @@ class User(_UserBase):
 
     class Config:
         orm_mode = True
-        from_attributes=True
+        from_attributes = True
+        allow_population_by_field_name = True
 
 
 class _LeadBase(_pydantic.BaseModel):
@@ -34,6 +36,11 @@ class _LeadBase(_pydantic.BaseModel):
 class LeadCreate(_LeadBase):
     pass
 
+    class Config:
+        orm_mode = True
+        from_attributes = True
+        allow_population_by_field_name = True
+
 
 class Lead(_LeadBase):
     id: int
@@ -43,6 +50,5 @@ class Lead(_LeadBase):
 
     class Config:
         orm_mode = True
-        from_attributes=True
-
-
+        from_attributes = True
+        allow_population_by_field_name = True
